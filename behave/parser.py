@@ -136,6 +136,15 @@ class Parser(object):
         # -- RESET STATE:
         self.tags = []
 
+    def _build_setup_statement(self, keyword, line):
+        if self.tags:
+            msg = 'Setup supports no tags: @%s' % (' @'.join(self.tags))
+            raise ParserError(msg, self.line, self.filename, line)
+        name = line[len(keyword) + 1:].strip()
+        statement = model.Setup(self.filename, self.line, keyword, name)
+        self.statement = statement
+        self.feature.setup = self.statement
+
     def _build_background_statement(self, keyword, line):
         if self.tags:
             msg = 'Background supports no tags: @%s' % (' @'.join(self.tags))
@@ -296,6 +305,12 @@ class Parser(object):
         if self.subaction_detect_next_scenario(line):
             return True
 
+        setup_kwd = self.match_keyword('setup', line)
+        if setup_kwd:
+            self._build_setup_statement(setup_kwd, line)
+            self.state = 'action_steps'
+            return True
+
         background_kwd = self.match_keyword('background', line)
         if background_kwd:
             self._build_background_statement(background_kwd, line)
@@ -386,6 +401,24 @@ class Parser(object):
             assert self.statement.steps, "TABLE-START without step detected."
             self.state = 'table'
             return self.action_table(line)
+
+        return False
+
+    def action_action_steps(self, line):
+        """
+        Entered when first step in a Setup or Teardown is detected
+
+        DETECT:
+          * next Scenario/ScenarioOutline
+        """
+        line = line.strip()
+        step = self.parse_action_step(line)
+        if step:
+            self.statement.steps.append(step)
+            return True
+
+        if self.subaction_detect_next_scenario(line):
+            return True
 
         return False
 
@@ -496,6 +529,11 @@ class Parser(object):
                                   name)
                 return step
         return None
+
+    def parse_action_step(self, line):
+        name = line.strip()
+        step = model.Step(self.filename, self.line, u'', u'', name)
+        return step
 
     def parse_steps(self, text, filename=None):
         """

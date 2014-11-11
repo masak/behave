@@ -35,6 +35,8 @@
   name: English
   native: English
   feature: Feature
+  setup: Setup
+  teardown: Teardown
   background: Background
   scenario: Scenario
   scenario_outline: Scenario Outline|Scenario Template
@@ -51,6 +53,8 @@
   name: Arabic
   native: العربية
   feature: خاصية
+  setup: Setup
+  teardown: Teardown
   background: الخلفية
   scenario: سيناريو
   scenario_outline: سيناريو مخطط
@@ -64,6 +68,8 @@
   name: Bulgarian
   native: български
   feature: Функционалност
+  setup: Setup
+  teardown: Teardown
   background: Предистория
   scenario: Сценарий
   scenario_outline: Рамка на сценарий
@@ -78,6 +84,8 @@
   native: català
   background: Rerefons|Antecedents
   feature: Característica|Funcionalitat
+  setup: Setup
+  teardown: Teardown
   scenario: Escenari
   scenario_outline: Esquema de l'escenari
   examples: Exemples
@@ -91,6 +99,8 @@
   native: Cymraeg
   background: Cefndir
   feature: Arwedd
+  setup: Setup
+  teardown: Teardown
   scenario: Scenario
   scenario_outline: Scenario Amlinellol
   examples: Enghreifftiau
@@ -103,6 +113,8 @@
   name: Czech
   native: Česky
   feature: Požadavek
+  setup: Setup
+  teardown: Teardown
   background: Pozadí|Kontext
   scenario: Scénář
   scenario_outline: Náčrt Scénáře|Osnova scénáře
@@ -116,6 +128,8 @@
   name: Danish
   native: dansk
   feature: Egenskab
+  setup: Setup
+  teardown: Teardown
   background: Baggrund
   scenario: Scenarie
   scenario_outline: Abstrakt Scenario
@@ -129,6 +143,8 @@
   name: German
   native: Deutsch
   feature: Funktionalität
+  setup: Setup
+  teardown: Teardown
   background: Grundlage
   scenario: Szenario
   scenario_outline: Szenariogrundriss
@@ -142,6 +158,8 @@
   name: Australian
   native: Australian
   feature: Crikey
+  setup: Setup
+  teardown: Teardown
   background: Background
   scenario: Mate
   scenario_outline: Blokes
@@ -155,6 +173,8 @@
   name: LOLCAT
   native: LOLCAT
   feature: OH HAI
+  setup: Setup
+  teardown: Teardown
   background: B4
   scenario: MISHUN
   scenario_outline: MISHUN SRSLY
@@ -168,6 +188,8 @@
   name: Pirate
   native: Pirate
   feature: Ahoy matey!
+  setup: Setup
+  teardown: Teardown
   background: Yo-ho-ho
   scenario: Heave to
   scenario_outline: Shiver me timbers
@@ -181,6 +203,8 @@
   name: Scouse
   native: Scouse
   feature: Feature
+  setup: Setup
+  teardown: Teardown
   background: "Dis is what went down"
   scenario: "The thing of it is"
   scenario_outline: "Wharrimean is"
@@ -194,6 +218,8 @@
   name: Texan
   native: Texan
   feature: Feature
+  setup: Setup
+  teardown: Teardown
   background: Background
   scenario: Scenario
   scenario_outline: All y'all
@@ -207,6 +233,8 @@
   name: Esperanto
   native: Esperanto
   feature: Trajto
+  setup: Setup
+  teardown: Teardown
   background: Fono
   scenario: Scenaro
   scenario_outline: Konturo de la scenaro
@@ -221,6 +249,8 @@
   native: español
   background: Antecedentes
   feature: Característica
+  setup: Setup
+  teardown: Teardown
   scenario: Escenario
   scenario_outline: Esquema del escenario
   examples: Ejemplos
@@ -233,6 +263,8 @@
   name: Estonian
   native: eesti keel
   feature: Omadus
+  setup: Setup
+  teardown: Teardown
   background: Taust
   scenario: Stsenaarium
   scenario_outline: Raamstsenaarium
@@ -246,6 +278,8 @@
   name: Finnish
   native: suomi
   feature: Ominaisuus
+  setup: Setup
+  teardown: Teardown
   background: Tausta
   scenario: Tapaus
   scenario_outline: Tapausaihio
@@ -259,6 +293,8 @@
   name: French
   native: français
   feature: Fonctionnalité
+  setup: Setup
+  teardown: Teardown
   background: Contexte
   scenario: Scénario
   scenario_outline: Plan du scénario|Plan du Scénario
@@ -272,6 +308,8 @@
   name: Hebrew
   native: עברית
   feature: תכונה
+  setup: Setup
+  teardown: Teardown
   background: רקע
   scenario: תרחיש
   scenario_outline: תבנית תרחיש
@@ -285,6 +323,8 @@
   name: Croatian
   native: hrvatski
   feature: Osobina|Mogućnost|Mogucnost
+  setup: Setup
+  teardown: Teardown
   background: Pozadina
   scenario: Scenarij
   scenario_outline: Skica|Koncept
@@ -298,6 +338,8 @@
   name: Hungarian
   native: magyar
   feature: Jellemző
+  setup: Setup
+  teardown: Teardown
   background: Háttér
   scenario: Forgatókönyv
   scenario_outline: Forgatókönyv vázlat
@@ -311,6 +353,8 @@
   name: Indonesian
   native: Bahasa Indonesia
   feature: Fitur
+  setup: Setup
+  teardown: Teardown
   background: Dasar
   scenario: Skenario
   scenario_outline: Skenario konsep
@@ -324,6 +368,8 @@
   name: Icelandic
   native: Íslenska
   feature: Eiginleiki
+  setup: Setup
+  teardown: Teardown
   background: Bakgrunnur
   scenario: Atburðarás
   scenario_outline: Lýsing Atburðarásar|Lýsing Dæma
@@ -337,6 +383,8 @@
   name: Italian
   native: italiano
   feature: Funzionalità
+  setup: Setup
+  teardown: Teardown
   background: Contesto
   scenario: Scenario
   scenario_outline: Schema dello scenario
@@ -350,6 +398,8 @@
   name: Japanese
   native: 日本語
   feature: フィーチャ|機能
+  setup: Setup
+  teardown: Teardown
   background: 背景
   scenario: シナリオ
   scenario_outline: シナリオアウトライン|シナリオテンプレート|テンプレ|シナリオテンプレ
@@ -364,6 +414,8 @@
   native: 한국어
   background: 배경
   feature: 기능
+  setup: Setup
+  teardown: Teardown
   scenario: 시나리오
   scenario_outline: 시나리오 개요
   examples: 예
@@ -376,6 +428,8 @@
   name: Lithuanian
   native: lietuvių kalba
   feature: Savybė
+  setup: Setup
+  teardown: Teardown
   background: Kontekstas
   scenario: Scenarijus
   scenario_outline: Scenarijaus šablonas
@@ -389,6 +443,8 @@
   name: Luxemburgish
   native: Lëtzebuergesch
   feature: Funktionalitéit
+  setup: Setup
+  teardown: Teardown
   background: Hannergrond
   scenario: Szenario
   scenario_outline: Plang vum Szenario
@@ -402,6 +458,8 @@
   name: Latvian
   native: latviešu
   feature: Funkcionalitāte|Fīča
+  setup: Setup
+  teardown: Teardown
   background: Konteksts|Situācija
   scenario: Scenārijs
   scenario_outline: Scenārijs pēc parauga
@@ -415,6 +473,8 @@
   name: Dutch
   native: Nederlands
   feature: Functionaliteit
+  setup: Setup
+  teardown: Teardown
   background: Achtergrond
   scenario: Scenario
   scenario_outline: Abstract Scenario
@@ -428,6 +488,8 @@
   name: Norwegian
   native: norsk
   feature: Egenskap
+  setup: Setup
+  teardown: Teardown
   background: Bakgrunn
   scenario: Scenario
   scenario_outline: Scenariomal|Abstrakt Scenario
@@ -441,6 +503,8 @@
   name: Polish
   native: polski
   feature: Właściwość
+  setup: Setup
+  teardown: Teardown
   background: Założenia
   scenario: Scenariusz
   scenario_outline: Szablon scenariusza
@@ -455,6 +519,8 @@
   native: português
   background: Contexto
   feature: Funcionalidade
+  setup: Setup
+  teardown: Teardown
   scenario: Cenário|Cenario
   scenario_outline: Esquema do Cenário|Esquema do Cenario
   examples: Exemplos
@@ -468,6 +534,8 @@
   native: română
   background: Context
   feature: Functionalitate|Funcționalitate|Funcţionalitate
+  setup: Setup
+  teardown: Teardown
   scenario: Scenariu
   scenario_outline: Structura scenariu|Structură scenariu
   examples: Exemple
@@ -480,6 +548,8 @@
   name: Russian
   native: русский
   feature: Функция|Функционал|Свойство
+  setup: Setup
+  teardown: Teardown
   background: Предыстория|Контекст
   scenario: Сценарий
   scenario_outline: Структура сценария
@@ -493,6 +563,8 @@
   name: Swedish
   native: Svenska
   feature: Egenskap
+  setup: Setup
+  teardown: Teardown
   background: Bakgrund
   scenario: Scenario
   scenario_outline: Abstrakt Scenario|Scenariomall
@@ -506,6 +578,8 @@
   name: Slovak
   native: Slovensky
   feature: Požiadavka
+  setup: Setup
+  teardown: Teardown
   background: Pozadie
   scenario: Scenár
   scenario_outline: Náčrt Scenáru
@@ -519,6 +593,8 @@
   name: Serbian (Latin)
   native: Srpski (Latinica)
   feature: Funkcionalnost|Mogućnost|Mogucnost|Osobina
+  setup: Setup
+  teardown: Teardown
   background: Kontekst|Osnova|Pozadina
   scenario: Scenario|Primer
   scenario_outline: Struktura scenarija|Skica|Koncept
@@ -532,6 +608,8 @@
   name: Serbian
   native: Српски
   feature: Функционалност|Могућност|Особина
+  setup: Setup
+  teardown: Teardown
   background: Контекст|Основа|Позадина
   scenario: Сценарио|Пример
   scenario_outline: Структура сценарија|Скица|Концепт
@@ -545,6 +623,8 @@
   name: Turkish
   native: Türkçe
   feature: Özellik
+  setup: Setup
+  teardown: Teardown
   background: Geçmiş
   scenario: Senaryo
   scenario_outline: Senaryo taslağı
@@ -558,6 +638,8 @@
   name: Ukrainian
   native: Українська
   feature: Функціонал
+  setup: Setup
+  teardown: Teardown
   background: Передумова
   scenario: Сценарій
   scenario_outline: Структура сценарію
@@ -571,6 +653,8 @@
   name: Uzbek
   native: Узбекча
   feature: Функционал
+  setup: Setup
+  teardown: Teardown
   background: Тарих
   scenario: Сценарий
   scenario_outline: Сценарий структураси
@@ -584,6 +668,8 @@
   name: Vietnamese
   native: Tiếng Việt
   feature: Tính năng
+  setup: Setup
+  teardown: Teardown
   background: Bối cảnh
   scenario: Tình huống|Kịch bản
   scenario_outline: Khung tình huống|Khung kịch bản
@@ -597,6 +683,8 @@
   name: Chinese simplified
   native: 简体中文
   feature: 功能
+  setup: Setup
+  teardown: Teardown
   background: 背景
   scenario: 场景
   scenario_outline: 场景大纲
@@ -610,6 +698,8 @@
   name: Chinese traditional
   native: 繁體中文
   feature: 功能
+  setup: Setup
+  teardown: Teardown
   background: 背景
   scenario: 場景|劇本
   scenario_outline: 場景大綱|劇本大綱

@@ -305,6 +305,7 @@ class Feature(TagAndStatusStatement, Replayable):
         tags = tags or []
         super(Feature, self).__init__(filename, line, keyword, name, tags)
         self.description = description or []
+        self.setup = None
         self.scenarios = []
         self.background = background
         self.parser = None
@@ -513,6 +514,58 @@ class Feature(TagAndStatusStatement, Replayable):
 
         failed = (failed_count > 0)
         return failed
+
+
+class Setup(BasicStatement, Replayable):
+    '''A `setup`_ parsed from a *feature file*.
+
+    The attributes are:
+
+    .. attribute:: keyword
+
+       This is the keyword as seen in the *feature file*. In English this will
+       typically be "Setup".
+
+    .. attribute:: name
+
+       The name of the setup (the text after "Setup:".)
+
+    .. attribute:: steps
+
+       A list of :class:`~behave.model.Step` making up this setup.
+
+    .. attribute:: duration
+
+       The time, in seconds, that it took to run this setup. If read
+       before the setup is run it will return 0.0.
+
+    .. attribute:: filename
+
+       The file name (or "<string>") of the *feature file* where the setup
+       was found.
+
+    .. attribute:: line
+
+       The line number of the *feature file* where the setup was found.
+    '''
+    type = "background"
+
+    def __init__(self, filename, line, keyword, name, steps=None):
+        super(Setup, self).__init__(filename, line, keyword, name)
+        self.steps = steps or []
+
+    def __repr__(self):
+        return '<Setup "%s">' % self.name
+
+    def __iter__(self):
+        return iter(self.steps)
+
+    @property
+    def duration(self):
+        duration = 0
+        for step in self.steps:
+            duration += step.duration
+        return duration
 
 
 class Background(BasicStatement, Replayable):

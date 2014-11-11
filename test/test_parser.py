@@ -849,6 +849,23 @@ Feature: Stuff
 """.lstrip()
         assert_raises(parser.ParserError, parser.parse_feature, doc)
 
+    def test_parses_feature_with_setup(self):
+        doc = u"""
+Feature: Stuff
+  Setup:
+    One step
+    Another step
+    Note that none of these steps have keywords
+""".lstrip()
+        feature = parser.parse_feature(doc)
+        eq_(feature.name, "Stuff")
+        assert(feature.setup)
+        self.compare_steps(feature.setup.steps, [
+            ('', '', 'One step', None, None),
+            ('', '', 'Another step', None, None),
+            ('', '', 'Note that none of these steps have keywords', None, None),
+        ])
+
 class TestForeign(Common):
     def test_first_line_comment_sets_language(self):
         doc = u"""
