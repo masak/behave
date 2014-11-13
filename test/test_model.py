@@ -44,6 +44,15 @@ class TestFeatureRun(unittest.TestCase):
 
         assert not self.formatters[0].background.called
 
+    def test_run_runs_setup(self):
+        setup = Mock()
+        feature = model.Feature('foo.feature', 1, u'Feature', u'foo',
+                                setup=setup)
+
+        feature.run(self.runner)
+
+        setup.run.assert_called_with(self.runner)
+
     def test_run_runs_scenarios(self):
         scenarios = [Mock(), Mock()]
         for scenario in scenarios:

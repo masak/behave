@@ -301,11 +301,11 @@ class Feature(TagAndStatusStatement, Replayable):
     type = "feature"
 
     def __init__(self, filename, line, keyword, name, tags=None,
-                 description=None, scenarios=None, background=None):
+                 description=None, setup=None, scenarios=None, background=None):
         tags = tags or []
         super(Feature, self).__init__(filename, line, keyword, name, tags)
         self.description = description or []
-        self.setup = None
+        self.setup = setup
         self.scenarios = []
         self.background = background
         self.parser = None
@@ -477,6 +477,9 @@ class Feature(TagAndStatusStatement, Replayable):
             # -- RE-EVALUATE SHOULD-RUN STATE:
             # Hook may call feature.mark_skipped() to exclude it.
             run_feature = self.should_run()
+
+        if self.setup:
+            self.setup.run(runner)
 
         if self.background and (run_feature or runner.config.show_skipped):
             for formatter in runner.formatters:
